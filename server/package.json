@@ -1,0 +1,53 @@
+{
+  "name": "server",
+  "version": "2.3.8",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./input.css -o ./public/output.css",
+    "build": "npm run build:css && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.Cortex.server",
+    "productName": "Cortex Server",
+    "directories": {
+      "output": "dist-final"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "MIASMA777",
+        "repo": "Cortex"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bonjour-service": "^1.4.3",
+    "cors": "^2.8.6",
+    "electron-updater": "^6.8.9",
+    "express": "^5.2.1",
+    "localtunnel": "^2.0.2",
+    "loudness": "^0.4.2",
+    "multer": "^2.2.0",
+    "socket.io": "^4.8.3",
+    "windows-media-sessions": "^1.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "electron": "^43.0.0",
+    "electron-builder": "^26.15.3",
+    "electron-packager": "^17.1.2",
+    "jimp": "^1.6.1",
+    "png-to-ico": "^3.0.2",
+    "tailwindcss": "^4.3.2"
+  }
+}
