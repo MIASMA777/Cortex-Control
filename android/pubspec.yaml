@@ -46,7 +46,7 @@ dependencies:
   nsd: ^5.0.1
   lucide_icons_flutter: any
   url_launcher: ^6.3.0
-  device_info_plus: ^13.2.0
+  device_info_plus: ^13.3.0
   package_info_plus: ^10.2.1
   file_picker: ^12.0.0-beta.7
   http: ^1.2.0
